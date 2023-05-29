@@ -54,8 +54,8 @@
           </nav>
     </header>
 
-    <main class="flex-centered">
-        <div class="card ">
+    <main class="flex-centered flex-wrap">
+        <div class="main card ">
             <div class="card-header">
                 <h3>Acquista il tuo biglietto</h3>
 
@@ -66,10 +66,48 @@
             </div>
 
             <div class="card-body p-5">
-                <div class="pills">Inserisci l'età: <span id="UserAge"></span></div>
-                <div class="pills">Inserisci i km da percorrere: <span id="UserKm"></span></div>
-                <div class="pills">Il tuo biglietto costa: <span id="ticket"></span></div>
+              <div class="pills">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="name" value="Riccardo">
+
+                <label for="lastname" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="lastname" value="Basso">
+              </div>
+
+                <div class="pills">
+                  <label for="UserKm" class="form-label">Distanza in km</label>
+                  <input type="text" class="form-control" id="UserKm" value="210">
+                </div>
+                
+                <div class="pills">
+                  <label for="UserAge" class="form-label">Età del passeggero</label>
+                  <input type="text" class="form-control" id="UserAge" value="22">
+                </div>
+
+                <button id="biglietto" class="button">Acquista biglietto</button>
+                <button id="annulla" class="button" onClick="window.location = 'index.html'">Annulla biglietto</button>
             </div>
+
+        </div>
+
+        <div class="card d-none" id="ticket-card">
+          <div class="card-header bgc-light-grey">
+            <div class="header-left">
+              <img src="img/Treno_Regionale.svg" alt="Treno_Regionale" width="50px">
+              <span id="train-code"></span>
+            </div>
+
+            <div class="header-right">
+              <span id="ticket" class="fw-bold text-danger"></span>
+
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div id="ticketName"></div>
+            <div id="UserType"></div>
+            <div id="carriage"></div>
+          </div>
         </div>
     </main>
 

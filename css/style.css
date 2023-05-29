@@ -38,6 +38,10 @@ h3{
     color: var(--primary-color);
 }
 
+.show{
+    display: block;
+}
+
 /* ****************************************************************************************** */
 .card{
     flex:0 1 100%;
@@ -48,12 +52,15 @@ h3{
     overflow: hidden;
 }
 
-.card-header{
+.main.card .card-header{
     background-color: var(--color-card);
     color: white;
+}
+
+.card-header{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .card-header,
@@ -61,7 +68,16 @@ h3{
     padding: 20px;
 }
 
-/** Bottone per generare una nuova password */
+/** Bottoni */
+.button{
+    padding: 10px;
+    background-color: var(--light-grey);
+    border: 1px solid var(--dark-grey);
+    border-radius: 50px;
+    margin: 0 0 10px 20px;
+}
+
+/** Bottone per generare un nuovo biglietto */
 .refresh{
     cursor: pointer;
     font-size: var(--font-size-xl);
@@ -85,13 +101,29 @@ h3{
 .pills{
     background-color: var(--color-card);
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
     border-radius: 50px;
 
     color: white;
     font-size: var(--font-size-m);
 
     /* overflow: auto */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/** "Form" inserimento dati */
+.pills .form-control{
+    width: 80%;
+}
+
+.pills .form-label{
+    align-self: flex-start;
+
+    margin: 10px 0 5px 10%;
 }
 
 /** Media query larghezza card */
