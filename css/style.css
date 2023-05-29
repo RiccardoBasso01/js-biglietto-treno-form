@@ -1,0 +1,120 @@
+/* FUNZIONALITÀ */
+:root{
+    --font-size-xs:0.6rem;
+    --font-size-s:0.7rem;
+    --font-size-m:0.8rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:3.5rem;
+    --font-size-xxxl:5rem;
+
+    --color-card: #bb243d;
+    --light-grey: #cdcdcd;
+    --grey: #969696;
+    --dark-grey: #585858;
+
+    --primary-color: #006a65;
+}
+
+h3{
+    display: inline-block;
+}
+
+.fs-xs{
+    font-size: var(--font-size-m);
+}
+
+.flex-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgc-light-grey{
+    background-color: var(--light-grey);
+}
+
+.c-primary{
+    color: var(--primary-color);
+}
+
+/* ****************************************************************************************** */
+.card{
+    flex:0 1 100%;
+    margin: 30px;
+
+    border: 1px solid var(--grey);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.card-header{
+    background-color: var(--color-card);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-header,
+.card-body{
+    padding: 20px;
+}
+
+/** Bottone per generare una nuova password */
+.refresh{
+    cursor: pointer;
+    font-size: var(--font-size-xl);
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+}
+
+#button-title{
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+
+    width: 20px;
+    height: 20px;
+    background-color: var(--grey);
+    border-radius: 50%;
+}
+
+/** Campi inserimento dati */
+.pills{
+    background-color: var(--color-card);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 50px;
+
+    color: white;
+    font-size: var(--font-size-m);
+
+    /* overflow: auto */
+}
+
+/** Media query larghezza card */
+@media screen and (min-width: 576px){
+    .card{
+        flex:0 0 540px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .card{
+        flex:0 0 600px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .card{
+        flex:0 0 775px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .card{
+        flex:0 0 937px;
+    }
+}
